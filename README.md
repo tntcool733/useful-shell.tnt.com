@@ -15,4 +15,10 @@ sudo jmap -heap <pid>
 sudo -u www-data jmap -dump:format=b,file=/tmp/xxx.hprof [pid]
 ```
 
-## bash
+## linux
+```
+# ps
+ps H -eo user,pid,ppid,tid,time,%cpu --sort=%cpu
+ps -mp <pid> -o THREAD,tid,time | sort -rn
+
+```
