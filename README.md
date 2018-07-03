@@ -25,6 +25,12 @@ ps H -eo user,pid,ppid,tid,time,%cpu --sort=%cpu
 // 查看某进程的线程cpu占用从高到低排序
 ps -mp <pid> -o THREAD,tid,time | sort -rn
 
+// 查看某ip所建tcp连接
+netstat -anp |grep <ip>
+
+// 查询进程信息
+ps -ef |grep <pid>
+
 ```
 
 ## svn 
