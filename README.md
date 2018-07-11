@@ -18,6 +18,8 @@ sudo -u www-data jmap -dump:format=b,file=/tmp/xxx.hprof [pid]
 ```
 
 ## linux
++ [查找某目录下多个进程pid](https://github.com/tntcool733/useful-shell.tnt.com/blob/master/get_pid.sh)
+
 ```
 // 查看线程的cpu占用从高到低排序
 ps H -eo user,pid,ppid,tid,time,%cpu --sort=%cpu
