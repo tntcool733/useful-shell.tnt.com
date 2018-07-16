@@ -1,24 +1,18 @@
 # Useful Command Line
 
 ## jvm tools
++ j_combine [jvm命令工具一键使用](https://github.com/tntcool733/useful-shell.tnt.com/blob/master/j_combine.sh)
 ```
-// jstack工具打印线程堆栈信息
-sudo -s
-sudo -u www-data jstack <pid> > ~/temp.log
-printf "%x\n" pid
-
-// jstat实时查看内存分布变化
-sudo jstat -gcutil <pid> 1000
-
-// jmap打印堆内存分布简要信息
-sudo jmap -heap <pid>
-
-// 整个堆内存文件hprof打印
-sudo -u www-data jmap -dump:format=b,file=/tmp/xxx.hprof [pid]
+# 注：需先切换为root
+sudo -s 
+bash ./j_combine <user> <pid> <dir>
+<user> -- 将会以user身份运行命令
+<pid>  -- 进程pid
+<dir>  -- 输出的文件夹。注意：hprof堆文件始终会输出在/tmp/目录下
 ```
 
 ## linux
-+ [查找某目录下多个进程pid](https://github.com/tntcool733/useful-shell.tnt.com/blob/master/get_pid.sh)
++ get_pids [查找某目录下多个进程pid](https://github.com/tntcool733/useful-shell.tnt.com/blob/master/get_pids.sh)
 ```
 bash ./get_pid.sh <dir> <UID>
 <dir> -- 该目录下的文件夹名都会被当成进程名称，进行过滤查找pid
@@ -39,6 +33,7 @@ netstat -anp |grep <ip>
 
 // 查询进程信息
 ps -ef |grep <pid>
+printf "%x\n" pid
 
 ```
 
