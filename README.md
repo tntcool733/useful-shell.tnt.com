@@ -1,7 +1,7 @@
 # Useful Command Line
 
 ## jvm tools
-+ j_combine [jvm命令工具一键使用](https://github.com/tntcool733/useful-shell.tnt.com/blob/master/j_combine.sh)
++ [j_combine](https://github.com/tntcool733/useful-shell.tnt.com/blob/master/j_combine.sh) jvm命令套餐
 ```
 # 注：需先切换为root
 sudo -s 
@@ -9,16 +9,19 @@ bash ./j_combine <user> <pid> <dir>
 <user> -- 将会以user身份运行命令
 <pid>  -- 进程pid
 <dir>  -- 输出的文件夹。注意：hprof堆文件始终会输出在/tmp/目录下
+
+例：sudo -s
+    bash ./j_combine www-data 111 /home/xxx
 ```
 
 ## linux
-+ get_pids [查找某目录下多个进程pid](https://github.com/tntcool733/useful-shell.tnt.com/blob/master/get_pids.sh)
++ [get_pids](https://github.com/tntcool733/useful-shell.tnt.com/blob/master/get_pids.sh) 查找多进程pid
 ```
-bash ./get_pid.sh <dir> <UID>
+bash ./get_pids.sh <dir> <UID>
 <dir> -- 该目录下的文件夹名都会被当成进程名称，进行过滤查找pid
 <UID> -- 该用户id的进程才会被查找pid
 
-例：bash ./get_pid.sh /data/service/java_base www-data
+例：bash ./get_pids.sh /data/service/java_base www-data
 ```
 
 ```
