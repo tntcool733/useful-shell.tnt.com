@@ -24,18 +24,19 @@ bash ./get_pids.sh <dir> <UID>
 例：bash ./get_pids.sh /data/service/java_base www-data
 ```
 
-+ [scp](http://www.runoob.com/linux/linux-comm-scp.html) scp命令传输文件
++ [scp](http://www.runoob.com/linux/linux-comm-scp.html) 文件传输
 ```bash
 # 本地到服务器
-scp local_file remote_username@remote_ip:remote_file
+scp    local_file   remote_username@remote_ip:remote_file
 scp -r local_folder remote_username@remote_ip:remote_folder 
 
 # 服务器到本地
-scp remote_username@remote_ip:remote_file  local_file
+scp    remote_username@remote_ip:remote_file    local_file
 scp -r remote_username@remote_ip:remote_folder  local_folder 
 
-例：scp tntcool733@1.2.3.4:/path/file.log /localpath/temp_file.log
-	scp /localpath/temp_file.log tntcool733@1.2.3.4:/path/file.log 
+例：
+scp tntcool733@1.2.3.4:/path/file.log /localpath/temp_file.log
+scp /localpath/temp_file.log tntcool733@1.2.3.4:/path/file.log 
 ```
 
 ```
