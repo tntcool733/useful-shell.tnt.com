@@ -1,8 +1,8 @@
-# Useful Command Line
+# Useful Shell
 
 ## jvm tools
 + [j_combine](https://github.com/tntcool733/useful-shell.tnt.com/blob/master/j_combine.sh) jvm命令套餐
-```
+```bash
 # 注：需先切换为root
 sudo -s 
 bash ./j_combine <user> <pid> <dir>
@@ -16,12 +16,26 @@ bash ./j_combine <user> <pid> <dir>
 
 ## linux
 + [get_pids](https://github.com/tntcool733/useful-shell.tnt.com/blob/master/get_pids.sh) 查找多进程pid
-```
+```bash
 bash ./get_pids.sh <dir> <UID>
 <dir> -- 该目录下的文件夹名都会被当成进程名称，进行过滤查找pid
 <UID> -- 该用户id的进程才会被查找pid
 
 例：bash ./get_pids.sh /data/service/java_base www-data
+```
+
++ [scp](http://www.runoob.com/linux/linux-comm-scp.html) scp命令传输文件
+```bash
+# 本地到服务器
+scp local_file remote_username@remote_ip:remote_file
+scp -r local_folder remote_username@remote_ip:remote_folder 
+
+# 服务器到本地
+scp remote_username@remote_ip:remote_file  local_file
+scp -r remote_username@remote_ip:remote_folder  local_folder 
+
+例：scp tntcool733@1.2.3.4:/path/file.log /localpath/temp_file.log
+	scp /localpath/temp_file.log tntcool733@1.2.3.4:/path/file.log 
 ```
 
 ```
