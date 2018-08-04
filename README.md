@@ -28,6 +28,16 @@ bash ./j_combine <user> <pid> <dir>
 ```
 
 ## linux
++ [batch_run](https://github.com/tntcool733/useful-shell.tnt.com/blob/master/batch_run.sh)多机器运行命令
+```bash
+# 注：跳板机运行，并需准备好服务器ip列表文件
+bash ./batch_run.sh <ip_list_file> <bash_to_run>
+<ip_list_file> -- 机器ip列表文件
+<bash_to_run>  -- 将会运行的命令
+
+例：bash ./batch_run.sh ip_list "cat /data/weblog/business/xx.com/info.log |grep xxx"
+```
+
 + [get_pids](https://github.com/tntcool733/useful-shell.tnt.com/blob/master/get_pids.sh) 查找多进程pid
 ```bash
 bash ./get_pids.sh <dir> <UID>
