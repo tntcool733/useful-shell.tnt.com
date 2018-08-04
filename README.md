@@ -1,5 +1,18 @@
 # Useful Shell
 
+## ffmpeg
++ [ffmpeg](https://www.ffmpeg.org/ffmpeg.html) ffmpeg工具
+```bash
+# 转码推流
+ffmpeg  -re -i <source> -c:a copy -c:v libx264  -f flv <target>
+
+# 源码推流
+ffmpeg  -re -i <source> -c copy -f flv <target>
+
+# 转换视频分辨率
+ffmpeg -i <source_video> -s 1080x640 -vcodec h264 -strict -2 <target_video>
+```
+
 ## jvm tools
 + [j_combine](https://github.com/tntcool733/useful-shell.tnt.com/blob/master/j_combine.sh) jvm命令套餐
 ```bash
@@ -54,6 +67,7 @@ ps -ef |grep <pid>
 printf "%x\n" pid
 
 ```
+
 
 ## svn 
 + 忽略svn文件参考资料：https://math-linux.com/linux/tip-of-the-day/article/svn-how-to-ignore-file-or-directory-in-subversion
