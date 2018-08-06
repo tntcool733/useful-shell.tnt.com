@@ -29,10 +29,10 @@ bash ./j_combine <user> <pid> <dir>
 
 ## linux
 
-+ [curl](https://github.com/tntcool733/useful-shell.tnt.com/blob/master/curl)curl大全
+### [curl](https://github.com/tntcool733/useful-shell.tnt.com/blob/master/curl)命令大全
 
----
-+ [batch_run](https://github.com/tntcool733/useful-shell.tnt.com/blob/master/batch_run.sh)多机器运行命令
+
+### [batch_run](https://github.com/tntcool733/useful-shell.tnt.com/blob/master/batch_run.sh)多机器运行命令
 ```bash
 # 注：跳板机运行，并需准备好服务器ip列表文件
 bash ./batch_run.sh <ip_list_file> <bash_to_run>
@@ -42,8 +42,8 @@ bash ./batch_run.sh <ip_list_file> <bash_to_run>
 例：bash ./batch_run.sh ip_list "cat /data/weblog/business/xx.com/info.log |grep xxx"
 ```
 
----
-+ [get_pids](https://github.com/tntcool733/useful-shell.tnt.com/blob/master/get_pids.sh) 查找多进程pid
+
+### [get_pids](https://github.com/tntcool733/useful-shell.tnt.com/blob/master/get_pids.sh) 查找多进程pid
 ```bash
 bash ./get_pids.sh <dir> <UID>
 <dir> -- 该目录下的文件夹名都会被当成进程名称，进行过滤查找pid
@@ -52,8 +52,7 @@ bash ./get_pids.sh <dir> <UID>
 例：bash ./get_pids.sh /data/service/java_base www-data
 ```
 
----
-+ [scp](http://www.runoob.com/linux/linux-comm-scp.html) 文件传输
+### [scp](http://www.runoob.com/linux/linux-comm-scp.html) 文件传输
 ```bash
 # 本地到服务器
 scp    local_file   remote_username@remote_ip:remote_file
