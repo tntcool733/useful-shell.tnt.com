@@ -1,0 +1,15 @@
+DNS域名解析耗时               - time_namelookup:     %{time_namelookup}\n
+TCP连接建立耗时               - time_connect:        %{time_connect}\n
+SSL/SSH等上层协议建立连接耗时 - time_appconnect:     %{time_appconnect}\n
+开始到最后一个请求事务的耗时  - time_pretransfer:    %{time_pretransfer}\n
+请求开始到响应开始传输的耗时  - time_redirect:       %{time_redirect}\n
+请求开始到将要传输的耗时      - time_starttransfer:  %{time_starttransfer}\n
+
+-----说明-----\n
+DNS查询：       time_namelookup\n
+TCP连接耗时：   time_pretransfter - time_namelookup\n
+服务器处理耗时：time_starttransfter - time_pretransfer\n
+内容传输耗时：	time_total - time_starttransfer\n
+-----说明-----\n
+
+总时间                        - time_total:          %{time_total}\n
