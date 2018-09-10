@@ -50,3 +50,8 @@ curl -b cookies www.yy.com
 ```bash
 curl --header "Content-Type:application/json" www.yy.com
 ```
+
+## 指定host
+```bash
+curl --silent -H "Host: www.xx.com" "127.0.0.1/xx/xx"
+```
