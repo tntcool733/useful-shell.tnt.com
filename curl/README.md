@@ -55,3 +55,8 @@ curl --header "Content-Type:application/json" www.yy.com
 ```bash
 curl --silent -H "Host: www.xx.com" "127.0.0.1/xx/xx"
 ```
+
+## 查询ip所属国家
+```bash
+curl ip.cn/<ip>
+```
