@@ -29,7 +29,9 @@ bash ./j_combine <user> <pid> <dir>
 
 ## linux
 
-### [curl](https://github.com/tntcool733/useful-shell.tnt.com/blob/master/curl)命令大全
+### [git](https://github.com/tntcool733/useful-shell.tnt.com/blob/master/git)
+
+### [curl](https://github.com/tntcool733/useful-shell.tnt.com/blob/master/curl)
 
 
 ### [batch_run](https://github.com/tntcool733/useful-shell.tnt.com/blob/master/batch_run.sh)多机器运行命令
