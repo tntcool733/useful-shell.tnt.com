@@ -1,32 +1,5 @@
 # Useful Shell
 
-## ffmpeg
-+ [ffmpeg](https://www.ffmpeg.org/ffmpeg.html) ffmpeg工具
-```bash
-# 转码推流
-ffmpeg  -re -i <source> -c:a copy -c:v libx264  -f flv <target>
-
-# 源码推流
-ffmpeg  -re -i <source> -c copy -f flv <target>
-
-# 转换视频分辨率
-ffmpeg -i <source_video> -s 1080x640 -vcodec h264 -strict -2 <target_video>
-```
-
-## jvm tools
-+ [j_combine](https://github.com/tntcool733/useful-shell.tnt.com/blob/master/j_combine.sh) jvm命令套餐
-```bash
-# 注：需先切换为root
-sudo -s 
-bash ./j_combine <user> <pid> <dir>
-<user> -- 将会以user身份运行命令
-<pid>  -- 进程pid
-<dir>  -- 输出的文件夹。注意：hprof堆文件始终会输出在/tmp/目录下
-
-例：sudo -s
-    bash ./j_combine www-data 111 /home/xxx
-```
-
 ## linux
 
 ### [git](https://github.com/tntcool733/useful-shell.tnt.com/blob/master/git)
@@ -84,6 +57,34 @@ netstat -anp |grep <ip>
 ps -ef |grep <pid>
 printf "%x\n" pid
 
+```
+
+
+## ffmpeg
++ [ffmpeg](https://www.ffmpeg.org/ffmpeg.html) ffmpeg工具
+```bash
+# 转码推流
+ffmpeg  -re -i <source> -c:a copy -c:v libx264  -f flv <target>
+
+# 源码推流
+ffmpeg  -re -i <source> -c copy -f flv <target>
+
+# 转换视频分辨率
+ffmpeg -i <source_video> -s 1080x640 -vcodec h264 -strict -2 <target_video>
+```
+
+## jvm tools
++ [j_combine](https://github.com/tntcool733/useful-shell.tnt.com/blob/master/j_combine.sh) jvm命令套餐
+```bash
+# 注：需先切换为root
+sudo -s 
+bash ./j_combine <user> <pid> <dir>
+<user> -- 将会以user身份运行命令
+<pid>  -- 进程pid
+<dir>  -- 输出的文件夹。注意：hprof堆文件始终会输出在/tmp/目录下
+
+例：sudo -s
+    bash ./j_combine www-data 111 /home/xxx
 ```
 
 
