@@ -64,6 +64,15 @@ git commit -m 'xxx'
 
 # 提交更新，跳过暂存区。对new file，此命令不生效，需要git add
 git commit -a -m 'xxx'
+
+# 撤销操作
+git commit --amend
+
+# 提交后发现忘记了暂存某些需要的修改，可以像下面这样操作
+# 最终只会有一个提交 - 第二次提交将代替第一次提交的结果
+git commit -m 'initial commit'
+git add forgotten_file
+git commit --amend
 ```
 
 ## rm
@@ -82,10 +91,33 @@ git rm log/\*.log
 ```
 
 ## mv
-TODO
+```bash
+# 重命名
+git mv README.md README
+
+# 等价于以下三个动作
+mv README.md README
+git rm README.md
+git add README
+```
 
 ## log
-TODO
+```bash
+# 查看提交历史
+git log
+
+# 查看最近2次的提交并且显示差异
+git log -p -2
+
+# 每次简略的提交信息
+git log --stat
+
+# 更多格式
+git log --pretty=oneline/short/full/fuller
+
+# 图形化展现
+git log --graph
+```
 
 ## remote
 TODO
