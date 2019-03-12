@@ -117,16 +117,48 @@ git log --pretty=oneline/short/full/fuller
 
 # 图形化展现
 git log --graph
+
+# 查看各个分支当前所指的对象
+git log --oneline --decorate
+git log --oneline --decorate --graph --all
 ```
 
 ## remote
-TODO
+```bash
+# 显示需要读写远程仓库使用的 Git 保存的简写与其对应的 URL
+git remote -v
+
+# 添加远程仓库简写
+git remote add <shortname> <url>
+
+# 查看某一个远程仓库的更多信息
+git remote show [remote-name]
+
+# 重命名
+git remote rename [old-name] [new-name]
+
+# 移除
+git remote rm [remote-name]
+
+```
 
 ## fetch
-TODO
+```bash
+# 这个命令会访问远程仓库，从中拉取所有你还没有的数据。 
+# 执行完成后，你将会拥有那个远程仓库中所有分支的引用，可以随时合并或查看。
+git fetch [remote-name]
+```
+
+## pull
+```bash
+# TODO
+```
 
 ## push
-TODO
+```bash
+# 推送到远程仓库
+git push [remote-name]
+```
 
 ## tag
 TODO
